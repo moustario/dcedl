@@ -50,7 +50,7 @@ jobs:
         uses: actions/upload-artifact@v4.3.1
         with:
           name: build
-          path: './dist/browser'
+          path: './dist/'
   deploy:
     needs: build
     environment:
@@ -65,14 +65,14 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: build
-          path: './dist/browser'
+          path: './dist/'
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: './dist/browser'
+          path: './dist/browser/'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
