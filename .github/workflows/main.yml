@@ -24,8 +24,6 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     concurrency:
-      group: deploy-group
-      cancel-in-progress: true
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -60,8 +58,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     concurrency:
-      group: deploy-group
-      cancel-in-progress: true
       
     steps:
       - name: Checkout
