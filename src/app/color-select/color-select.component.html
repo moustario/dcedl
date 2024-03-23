@@ -1,0 +1,6 @@
+<div style="display:flex;flex-direction:row;witdh:100%">
+@for (choice of selections; track choice)
+{
+  <button (click)="onSelect(choice)">{{choice}}</button>
+}
+</div>
